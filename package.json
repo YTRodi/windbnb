@@ -1,0 +1,45 @@
+{
+	"name": "boiler-plate-react-ts",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite --open",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"lint": "eslint --fix",
+		"format": "prettier --write",
+		"lint:all": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
+		"format:all": "prettier --write .",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"vite-tsconfig-paths": "^3.4.1"
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.33",
+		"@types/react-dom": "^17.0.10",
+		"@typescript-eslint/eslint-plugin": "^5.12.1",
+		"@typescript-eslint/parser": "^5.12.1",
+		"@vitejs/plugin-react": "^1.0.7",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.4.0",
+		"eslint-config-standard": "^16.0.3",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-promise": "^5.2.0",
+		"eslint-plugin-react": "^7.29.2",
+		"husky": "^7.0.0",
+		"lint-staged": "^12.3.4",
+		"prettier": "^2.5.1",
+		"typescript": "^4.5.4",
+		"vite": "^2.9.9"
+	},
+	"lint-staged": {
+		"**/*.{js,jsx,ts,tsx}": [
+			"yarn run lint",
+			"yarn run format"
+		]
+	}
+}
