@@ -1,42 +1,24 @@
-import { useState } from 'react';
-import logo from 'public/logo.svg';
+import MOCK_DATA from '../public/data/stays.json';
+import { Card, Typography } from './components';
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<img width={500} src={logo} className='App-logo' alt='logo' />
-				<p>Hello Vite + React!</p>
-				<p>
-					<button type='button' onClick={() => setCount(count => count + 1)}>
-						count is: {count}
-					</button>
-				</p>
-				<p>
-					Edit <code>App.tsx</code> and save to test HMR updates.
-				</p>
-				<p>
-					<a
-						className='App-link'
-						href='https://reactjs.org'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						Learn React
-					</a>
-					{' | '}
-					<a
-						className='App-link'
-						href='https://vitejs.dev/guide/features.html'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						Vite Docs
-					</a>
-				</p>
+		<div className='mx-3'>
+			<header style={{ width: '297px', height: '55px', marginTop: '75px' }}>
+				<p>Logo</p>
+				<nav>Buscador</nav>
 			</header>
+
+			<main style={{ marginTop: '37px' }}>
+				<section className='flex justify-between items-center'>
+					<Typography variant='h1'>Stays in Finland</Typography>
+					<Typography variant='h3'>12+ stays</Typography>
+				</section>
+
+				{MOCK_DATA.map((stay, index) => (
+					<Card key={index} stay={stay} />
+				))}
+			</main>
 		</div>
 	);
 }
