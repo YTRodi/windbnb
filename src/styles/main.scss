@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './typography.scss';
+@import './variables';
+@import './typography';
 
 * {
 	margin: 0;
 	padding: 0;
 }
+
+body {
+	margin: 0;
+	// TODO: change this later, bc it's not the best way to do it
+	font-family: $font-montserrat, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// TODO: set max-width

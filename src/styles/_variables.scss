@@ -1,1 +1,22 @@
-// TODO: add variables for weight, font-size, line-height and colors
+// TODO: agregar variable "maxWidth" creo que en el diseño es 1440px
+
+// Colors
+// TODO: los colores los puedo crear en tailwind.config.js
+$gray-1: #333333;
+$gray-2: #4f4f4f;
+$gray-3: #828282;
+$gray-4: #bdbdbd;
+$gray-5: #f2f2f2;
+$red: #eb5757;
+$red-accent: #eb5757b8;
+$white: #ffffff;
+
+// Typos
+$font-montserrat: 'Montserrat';
+
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+// Layout
+// $container-max-width: 1440px;

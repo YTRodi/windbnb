@@ -2,40 +2,31 @@
 
 // TODO: pasar los "px" raros a "rem"
 
-body {
-	margin: 0;
-	// TODO: Cambiar esto, hay 2 tipos de fonts.
-	font-family: 'Montserrat', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 // Stays in "...x place"
 .typography--variant-h1 {
 	// TODO: crear variables scss para las font-weights, sizes, etc.
-
-	font-weight: 700;
+	font-weight: $weight-bold;
 	font-size: 18px;
 	line-height: 21.94px;
 }
 
 // stay.title
 .typography--variant-h2 {
-	font-weight: 600;
+	font-weight: $weight-semi-bold;
 	font-size: 14px;
 	line-height: 17.07px;
 }
 
 // 12+ stays
 .typography--variant-h3 {
-	font-weight: 500;
+	font-weight: $weight-medium;
 	font-size: 14px;
 	line-height: 17px;
 }
 
 // stay.type
 .typography--variant-h4 {
-	font-weight: 500;
+	font-weight: $weight-medium;
 	font-size: 12px;
 	line-height: 15px;
 }
@@ -43,20 +34,19 @@ body {
 // i.e: <Tag /> component
 .typography--variant-tag {
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: $weight-bold;
 	font-size: 10px;
 	line-height: 12px;
 }
 
 .typography--color-primary {
-	// TODO: los colores los puedo crear en tailwind.config.js
-	color: #333333;
+	color: $gray-1;
 }
 
 .typography--color-secondary {
-	color: #4f4f4f;
+	color: $gray-2;
 }
 
 .typography--color-tertiary {
-	color: #828282;
+	color: $gray-3;
 }
