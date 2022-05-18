@@ -34,9 +34,6 @@ function Card({ stay }: Props) {
 					</div>
 
 					<Typography variant='h4' color='secondary'>
-						{/* 
-						// TODO: Agregarle el .0 al final. ejemplo si viene 4.4, ponerlo en 4.40
-						*/}
 						⭐️ ${stay.rating.toFixed(2)}
 					</Typography>
 				</div>
