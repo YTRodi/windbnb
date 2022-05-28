@@ -1,52 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800&display=swap');
 
-// TODO: pasar los "px" raros a "rem"
+.typography {
+	&--family {
+		&-primary {
+			font-family: $font-montserrat, sans-serif;
 
-// Stays in "...x place"
-.typography--variant-h1 {
-	// TODO: crear variables scss para las font-weights, sizes, etc.
-	font-weight: $weight-bold;
-	font-size: 18px;
-	line-height: 21.94px;
-}
+			&--variant {
+				&-h1 {
+					font-weight: $weight-bold;
+					font-size: 18px;
+					line-height: 21.94px;
+				}
+				&-h2 {
+					font-weight: $weight-semi-bold;
+					font-size: 14px;
+					line-height: 17.07px;
+				}
+				&-h3 {
+					font-weight: $weight-medium;
+					font-size: 14px;
+					line-height: 17px;
+				}
+				&-h4 {
+					font-weight: $weight-medium;
+					font-size: 12px;
+					line-height: 15px;
+				}
+				&-tag {
+					text-transform: uppercase;
+					font-weight: $weight-bold;
+					font-size: 10px;
+					line-height: 12px;
+				}
+			}
+		}
+		&-secondary {
+			font-family: $font-mulish, sans-serif;
 
-// stay.title
-.typography--variant-h2 {
-	font-weight: $weight-semi-bold;
-	font-size: 14px;
-	line-height: 17.07px;
-}
+			&--variant {
+				&-h1 {
+					font-weight: $weight-regular;
+					font-size: 14px;
+					line-height: 17.57px;
+				}
+				&-h2 {
+					font-weight: $weight-bold;
+					font-size: 12px;
+					line-height: 15.06px;
+				}
+				&-tag {
+					font-weight: $weight-extra-bold;
+					text-transform: uppercase;
+					font-size: 10px;
+					line-height: 12px;
+				}
+			}
+		}
+	}
 
-// 12+ stays
-.typography--variant-h3 {
-	font-weight: $weight-medium;
-	font-size: 14px;
-	line-height: 17px;
-}
-
-// stay.type
-.typography--variant-h4 {
-	font-weight: $weight-medium;
-	font-size: 12px;
-	line-height: 15px;
-}
-
-// i.e: <Tag /> component
-.typography--variant-tag {
-	text-transform: uppercase;
-	font-weight: $weight-bold;
-	font-size: 10px;
-	line-height: 12px;
-}
-
-.typography--color-primary {
-	color: $gray-1;
-}
-
-.typography--color-secondary {
-	color: $gray-2;
-}
-
-.typography--color-tertiary {
-	color: $gray-3;
+	&--color {
+		&-primary {
+			color: $gray-1;
+		}
+		&-secondary {
+			color: $gray-2;
+		}
+		&-tertiary {
+			color: $gray-3;
+		}
+		&-alternative {
+			color: $gray-5;
+		}
+	}
 }

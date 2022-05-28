@@ -2,11 +2,13 @@ import React, { ComponentProps } from 'react';
 import classNames from 'classnames';
 
 type Props = ComponentProps<'p'> & {
+	family?: 'primary' | 'secondary';
 	variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'tag';
-	color?: 'primary' | 'secondary' | 'tertiary';
+	color?: 'primary' | 'secondary' | 'tertiary' | 'alternative';
 };
 
 const Typography: React.FC<Props> = ({
+	family = 'primary',
 	variant = 'h2',
 	color = 'primary',
 	children,
@@ -16,7 +18,8 @@ const Typography: React.FC<Props> = ({
 		<p
 			{...props}
 			className={classNames(props.className, {
-				[`typography--variant-${variant}`]: variant,
+				[`typography--family-${family}`]: family,
+				[`typography--family-${family}--variant-${variant}`]: variant,
 				[`typography--color-${color}`]: color,
 			})}
 		>
