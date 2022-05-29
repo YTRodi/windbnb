@@ -13,9 +13,19 @@
 body {
 	margin: 0;
 	// TODO: change this later, bc it's not the best way to do it
-	font-family: $font-montserrat, sans-serif;
+	// font-family: $font-montserrat, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+input {
+	&:focus {
+		outline: 1px solid $gray-1;
+	}
+
+	&::-webkit-search-cancel-button {
+		margin-left: 0.75rem;
+	}
 }
 
 // TODO: set max-width
