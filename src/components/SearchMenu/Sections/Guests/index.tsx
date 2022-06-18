@@ -1,7 +1,23 @@
 import Typography from '@/components/Typography';
 import GuestCounter from '@/components/GuestCounter';
 
-function GuestsSection() {
+interface Props {
+	adultsCount: number;
+	addAdult: () => void;
+	removeAdult: () => void;
+	childrenCount: number;
+	addChild: () => void;
+	removeChild: () => void;
+}
+
+function GuestsSection({
+	adultsCount,
+	addAdult,
+	removeAdult,
+	childrenCount,
+	addChild,
+	removeChild,
+}: Props) {
 	return (
 		<section>
 			<div className='ml-4 mt-9'>
@@ -13,8 +29,9 @@ function GuestsSection() {
 						Ages 13 or above
 					</Typography>
 					<GuestCounter
-						onAdd={() => console.log('add')}
-						onSubstract={() => console.log('substract')}
+						value={adultsCount}
+						onAdd={addAdult}
+						onSubstract={removeAdult}
 					/>
 				</div>
 			</div>
@@ -28,8 +45,15 @@ function GuestsSection() {
 						Ages 2-12
 					</Typography>
 					<GuestCounter
-						onAdd={() => console.log('add')}
-						onSubstract={() => console.log('substract')}
+						value={childrenCount}
+						onAdd={() => {
+							if (adultsCount === 0) {
+								addAdult();
+							}
+
+							addChild();
+						}}
+						onSubstract={removeChild}
 					/>
 				</div>
 			</div>

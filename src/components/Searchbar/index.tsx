@@ -18,19 +18,14 @@ function SearchBar({ setShowSearchMenu }: Props) {
 				boxShadow: '0px 1px 6px rgba(0, 0, 0, 0.5)',
 				height: '55px',
 			}}
+			onClick={() => setShowSearchMenu(true)}
 		>
 			<input
-				type='search'
+				type='text'
 				className='px-3 rounded-l-2xl typography--family-secondary--variant-h1 typography--color-primary
         '
 				value={`${DEFAULT_SELECTED_CITY}, ${DEFAULT_SELECTED_COUNTRY}`}
 				placeholder='City'
-				onChange={e => {
-					console.log('e', e);
-					// setShowSearchMenu(true);
-				}}
-				onFocus={() => setShowSearchMenu(true)}
-				onBlur={() => setShowSearchMenu(false)}
 			/>
 			<Separator />
 			<div className='flex items-center'>
