@@ -7,9 +7,6 @@ interface Props {
 }
 
 function SearchBar({ setShowSearchMenu }: Props) {
-	const DEFAULT_SELECTED_CITY = 'Helsinski';
-	const DEFAULT_SELECTED_COUNTRY = 'Finland';
-
 	return (
 		<div
 			className='flex rounded-2xl'
@@ -24,7 +21,6 @@ function SearchBar({ setShowSearchMenu }: Props) {
 				type='text'
 				className='px-3 rounded-l-2xl typography--family-secondary--variant-h1 typography--color-primary
         '
-				value={`${DEFAULT_SELECTED_CITY}, ${DEFAULT_SELECTED_COUNTRY}`}
 				placeholder='City'
 			/>
 			<Separator />
